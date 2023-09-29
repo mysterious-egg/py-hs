@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="dt.css">
+</head>
+<body>
+    <div class="header">
+        <p><a href="#">Cheatsheets</a>/Lists</p>
+        <h1>Lists</h1>
+    </div>
+    <div class="sidenav">
+        <input type="submit" class="Scrollbutton" value="Python Lists" onClick="document.getElementById('topic1').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="List Index" onClick="document.getElementById('topic2').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Indexing list" onClick="document.getElementById('topic3').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Check for item" onClick="document.getElementById('topic4').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Add List Items" onClick="document.getElementById('topic5').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Removing List Items" onClick="document.getElementById('topic6').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Change List Items" onClick="document.getElementById('topic7').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="List Comprehension" onClick="document.getElementById('topic8').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="List Methods" onClick="document.getElementById('topic9').scrollIntoView()"/>
+ 
+
+      </div>
+      <div class="main" ">
+        <div class="topicdiscription" id="topic1">
+            <h1>Python Lists</h1>
+            <p><ul>
+                <li>Lists are ordered collection of data items.</li>
+                <li>They store multiple items in a single variable.</li>
+                <li>List items are separated by commas and enclosed within square brackets [].</li>
+                <li>Lists are changeable meaning we can alter them after creation.</li>
+            </ul></p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>lst1 = [1,2,2,3,5,4,6]
+lst2 = ["Red", "Green", "Blue"]
+print(lst1)
+print(lst2)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>[1, 2, 2, 3, 5, 4, 6]
+['Red', 'Green', 'Blue']</code></pre>
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>details = ["Abhijeet", 18, "FYBScIT", 9.8]
+print(details)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Abhijeet', 18, 'FYBScIT', 9.8]</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h1>List Indexes</h1>
+            <p>Each item/element in a list has its own unique index. This index can be used to access any particular item from the list. The first item has index [0], second item has index [1], third item has index [2] and so on.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+#          [0]      [1]     [2]      [3]      [4]</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic3">
+            <h1>Accessing list items:
+            </h1>
+            <p><strong>Positive Indexing</strong></p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+#          [0]      [1]     [2]      [3]      [4]
+print(colors[2])
+print(colors[4])
+print(colors[0])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Blue
+Green
+Red</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic3">
+            
+            <p><strong>Negative Indexing</strong><br>Similar to positive indexing, negative indexing is also used to access items, but from the end of the list. The last item has index [-1], second last item has index [-2], third last item has index [-3] and so on.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+#          [-5]    [-4]    [-3]     [-2]      [-1]
+print(colors[-1])
+print(colors[-3])
+print(colors[-5])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Green
+Blue
+Red</code></pre>
+        </div>
+
+         <div class="topicdiscription" id="topic4">
+            <h2>Check for item</h2>
+            <p>We can check if a given item is present in the list. This is done using the in keyword.
+
+            </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+if "Yellow" in colors:
+    print("Yellow is present.")
+else:
+    print("Yellow is absent.")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Yellow is present.</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+            <h2>Range of Index:</h2>
+            <p>You can print a range of list items by specifying where do you want to start, where do you want to end and if you want to skip elements in between the range. 
+
+                Syntax:
+                
+                List[start : end : jumpIndex]
+                
+                Note: jump Index is optional. We will see this in given examples.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
+print(animals[3:7])	#using positive indexes
+print(animals[-7:-2])	#using negative indexes</code>
+            </pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['mouse', 'pig', 'horse', 'donkey']
+['bat', 'mouse', 'pig', 'horse', 'donkey']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+           
+            <p>Here, we provide index of the element from where we want to start and the index of the element till which we want to print the values.
+
+                Note: The element of the end index provided will not be included. 
+                
+                 
+                
+                Example: printing all element from a given index till the end</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
+print(animals[4:])	#using positive indexes
+print(animals[-4:])	#using negative indexes</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['pig', 'horse', 'donkey', 'goat', 'cow']
+['horse', 'donkey', 'goat', 'cow']</code>   </pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+            
+            <p>When no end index is provided, the interpreter prints all the values till the end.
+
+ 
+
+                Example: printing all elements from start to a given index</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
+print(animals[:6])	#using positive indexes
+print(animals[:-3])	#using negative indexes</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['cat', 'dog', 'bat', 'mouse', 'pig', 'horse']
+['cat', 'dog', 'bat', 'mouse', 'pig', 'horse']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+            <p>When no start index is provided, the interpreter prints all the values from start up to the end index provided. 
+
+ 
+
+                Example: print alternate values</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
+print(animals[::2])		#using positive indexes
+print(animals[-8:-1:2])	#using negative indexes</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['cat', 'bat', 'pig', 'donkey', 'cow']
+['dog', 'mouse', 'horse', 'goat']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+            <p>Here, we have not provided start and index, which means all the values will be considered. But as we have provided a jump index of 2 only alternate values will be printed. 
+
+ 
+
+                Example: printing every 3rd consecutive withing given range</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
+print(animals[1:8:3])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['dog', 'pig', 'goat']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic5">
+            <h1>Add List Items</h1>
+            <p>There are three methods to add items to list: append(), insert() and extend()
+
+                <br> <strong> append():</strong>
+                </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue"]
+                colors.append("green")
+                print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'indigo', 'blue', 'green']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic5">
+            <p><strong>insert():</strong>
+                This method inserts an item at the given index. User has to specify index and the item to be inserted within the insert() method.
+                
+                <br> Example:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue"]
+#           [0]        [1]      [2]
+
+colors.insert(1, "green")   #inserts item at index 1
+# updated list: colors = ["voilet", "green", "indigo", "blue"]
+#       indexs              [0]       [1]       [2]      [3]
+
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'green', 'indigo', 'blue']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic5">
+            <p><strong>extend():</strong>
+                This method adds an entire list or any other collection datatype (set, tuple, dictionary) to the existing list.
+                
+                <br>Example 1:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>#add a list to a list
+colors = ["voilet", "indigo", "blue"]
+rainbow = ["green", "yellow", "orange", "red"]
+colors.extend(rainbow)
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic5">
+            <p><strong>Concatenate two lists:</strong>
+                you can simply concatenate two list to join two lists.
+                
+                <br>Example:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green"]
+colors2 = ["yellow", "orange", "red"]
+print(colors + colors2)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>
+['voilet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            <h1>Removing List items</h1>
+            <p>There are various methods to remove items from the list: pop(), remove(), del(), clear()</p>            
+        </div>
+        <div class="topicdiscription" id="topic6">
+            <p><strong>pop()</strong>:
+                This method removes the last item of the list if no index is provided. If an index is provided, then it removes item at that specified index.
+                
+                Example 1:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+colors.pop()        #removes the last item of the list
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Red', 'Green', 'Blue', 'Yellow']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            <p><strong>remove():</strong>
+                This method removes specific item from the list.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green", "yellow"]
+colors.remove("blue")
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'indigo', 'green', 'yellow']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            
+            <p><strong>del:</strong>
+                del is not a method, rather it is a keyword which deletes item at specific from the list, or deletes the list entirely.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green", "yellow"]
+del colors[3]
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'indigo', 'blue', 'yellow']</code></pre>
+        </div>            
+        
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green", "yellow"]
+del colors
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>NameError: name 'colors' is not defined </code></pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            <p><strong>clear():</strong>
+                This method clears all items in the list and prints an empty list.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green", "yellow"]
+colors.clear()
+print(colors)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>[]</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic7">
+            <h1>Change List Items</h1>
+            <p>Changing items from list is easier, you just have to specify the index where you want to replace the item with existing item.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Harry", "Sarah", "Nadia", "Oleg", "Steve"]
+names[2] = "Millie"
+print(names)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Harry', 'Sarah', 'Millie', 'Oleg', 'Steve']</code></pre>
+        </div>
+    
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Harry", "Sarah", "Nadia", "Oleg", "Steve"]
+names[2:4] = ["juan", "Anastasia"]
+print(names)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Harry', 'Sarah', 'juan', 'Anastasia', 'Steve']</code></pre>
+        </div>
+
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Harry", "Sarah", "Nadia", "Oleg", "Steve"]
+names[1:4] = ["juan", "Anastasia"]
+print(names)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Harry', 'juan', 'Anastasia', 'Steve']</code></pre>
+        </div>        
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Harry", "Sarah", "Nadia", "Oleg", "Steve"]
+names[2:3] = ["juan", "Anastasia", "Bruno", "Olga", "Rosa"]
+print(names)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Harry', 'Sarah', 'juan', 'Anastasia', 'Bruno', 'Olga', 'Rosa', 'Oleg', 'Steve']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic8">
+            <h1>List Comprehension</h1>
+            <p>List comprehensions are used for creating new lists from other iterables like lists, tuples, dictionaries, sets, and even in arrays and strings.
+
+ 
+
+               <strong>Syntax:</strong> <br>
+
+                
+                List = [expression(item) for item in iterable if condition] <br>
+
+                
+               <strong> expression:</strong> it is the item which is being iterated.
+                
+               <br><strong> iterable:</strong> it can be list, tuples, dictionaries, sets, and even in arrays and strings.
+                
+              <br> <strong> condition:</strong> condition checks if the item should be added to the new list or not. 
+                
+                 
+                
+               <strong>  Example 1: </strong>accepts items with the small letter “o” in the new list </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Milo", "Sarah", "Bruno", "Anastasia", "Rosa"]
+namesWith_O = [item for item in names if "o" in item]
+print(namesWith_O)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Milo', 'Bruno', 'Rosa']</code></pre>
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>names = ["Milo", "Sarah", "Bruno", "Anastasia", "Rosa"]
+namesWith_O = [item for item in names if (len(item) > 4)]
+print(namesWith_O)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Sarah', 'Bruno', 'Anastasia']</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <h1>List Methods</h1>
+            <p>We have discussed methods like append(), clear(), extend(), insert(), pop(), remove() before. Now we will learn about some more list methods</p>  
+            <h2>sort(): This method sorts the list in ascending order.</h2>          
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green"]
+colors.sort()
+print(colors)
+
+num = [4,2,5,3,6,1,2,1,2,8,9,7]
+num.sort()
+print(num)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['blue', 'green', 'indigo', 'voilet']
+[1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <p>What if you want to print the list in descending order?
+                We must give reverse=True as a parameter in the sort method.
+                
+                Example:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green"]
+colors.sort(reverse=True)
+print(colors)
+
+num = [4,2,5,3,6,1,2,1,2,8,9,7]
+num.sort(reverse=True)
+print(num)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'indigo', 'green', 'blue']
+[9, 8, 7, 6, 5, 4, 3, 2, 2, 2, 1, 1]</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <p><strong>reverse(): </strong>This method reverses the order of the list. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "indigo", "blue", "green"]
+colors.reverse()
+print(colors)
+
+num = [4,2,5,3,6,1,2,1,2,8,9,7]
+num.reverse()
+print(num)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['green', 'blue', 'indigo', 'voilet']
+[7, 9, 8, 2, 1, 2, 1, 6, 3, 5, 2, 4]</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <p><strong>index():</strong> This method returns the index of the first occurrence of the list item.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "green", "indigo", "blue", "green"]
+print(colors.index("green"))
+
+num = [4,2,5,3,6,1,2,1,3,2,8,9,7]
+print(num.index(3))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>1
+3</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <p><strong>count():</strong> Returns the count of the number of items with the given value.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "green", "indigo", "blue", "green"]
+print(colors.count("green"))
+
+num = [4,2,5,3,6,1,2,1,3,2,8,9,7]</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>2
+3</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic9">
+            <p><strong>copy():</strong> Returns copy of the list. This can be done to perform operations on the list without modifying the original list. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>colors = ["voilet", "green", "indigo", "blue"]
+newlist = colors.copy()
+print(colors)
+print(newlist)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['voilet', 'green', 'indigo', 'blue']
+['voilet', 'green', 'indigo', 'blue']</code></pre>
+        </div>
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

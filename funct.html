@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="dt.css">
+</head>
+<body>
+    <div class="header">
+        <p><a href="#">Cheatsheets</a>/Python Functions</p>
+        <h1>Python Functions</h1>
+    </div>
+    <div class="sidenav">
+        <input type="submit" class="Scrollbutton" value="Intro to Functions" onClick="document.getElementById('topic1').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Function Arguments" onClick="document.getElementById('topic2').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Return Statement" onClick="document.getElementById('topic3').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Python Recursion" onClick="document.getElementById('topic4').scrollIntoView()"/>
+ 
+      </div>
+      <div class="main">
+        <div class="topicdiscription" id="topic1">
+            <h2>Python Functions</h2>
+            <p>A function is a block of code that performs a specific task whenever it is called. In bigger programs, where we have large amounts of code, it is advisable to create or use existing functions that make the program flow organized and neat.
+<br>
+ 
+
+                There are two types of functions:
+                <br>
+                built-in functions <br>
+                user-defined functions <br>
+                 <br>
+                
+              <strong>   1. built-in functions:</strong> <br>
+                These functions are defined and pre-coded in python. Some examples of built-in functions are as follows: <br>
+                <br>
+              <strong>  min(), max(), len(), sum(), type(), range(), dict(), list(), tuple(), set(), print(), etc.</strong>
+              <br>
+    
+                <br>
+                 
+                
+             <strong>   2. user-defined functions: </strong> <br>
+                We can create functions to perform specific tasks as per our needs. Such functions are called user-defined functions.
+                <br>
+                Syntax:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def function_name(parameters):
+    Code and Statements</code></pre>
+        </div>
+    
+        <div class="topicdiscription" id="topic1">
+            <p><ul>
+                <li>Create a function using the def keyword, followed by a function name, followed by a paranthesis (()) and a colon(:).</li>
+                <li>Any parameters and arguments should be placed within the parentheses.</li>
+                <li>Rules to naming function are similar to that of naming variables.</li>
+                <li>Any statements and other code within the function should be indented.</li>
+            </ul></p>
+            <p><strong>Call a function:</strong> 
+                We call a function by giving the function name, followed by parameters (if any) in the parenthesis.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, lname):
+    print("Hello,", fname, lname)
+
+name("Sam", "Wilson")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, Sam Wilson</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h2>Function Arguments</h2>
+            <p>There are four types of arguments that we can provide in a function: <br>
+            <ul>
+                <li>Default Arguments</li>
+                <li>Keyword Arguments</li>
+                <li>Required Arguments</li>
+                <li>Variable-length Arguments</li>
+            </ul></p>            
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h2>Default Argument</h2>
+            <p>We can provide a default value while creating a function. This way the function assumes a default value even if a value is not provided in the function call for that argument.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, mname = "Jhon", lname = "Whatson"):
+    print("Hello,", fname, mname, lname)
+
+name("Amy")
+</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, Amy Jhon Whatson </code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h2>Keyword arguments:</h2>
+            <p>We can provide arguments with key = value, this way the interpreter recognizes the arguments by the parameter name. Hence, the the order in which the arguments are passed does not matter.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, mname, lname):
+    print("Hello,", fname, mname, lname)
+
+name(mname = "Peter", lname = "Wesker", fname = "Jade")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, Jade Peter Wesker</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h2>Required arguments:</h2>
+            <p>In case we don’t pass the arguments with a key = value syntax, then it is necessary to pass the arguments in the correct positional order and the number of arguments passed should match with actual function definition.
+
+                <strong>Example 1:</strong> when number of arguments passed does not match to the actual function definition.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, mname, lname):
+    print("Hello,", fname, mname, lname)
+
+name("Peter", "Quill")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>name("Peter", "Quill")
+TypeError: name() missing 1 required positional argument: 'lname'</code></pre>
+        </div>
+
+         <div class="topicdiscription" id="topic2">
+           
+            <p> 
+
+               <strong> Example 2: </strong>when number of arguments passed matches to the actual function definition.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, mname, lname):
+    print("Hello,", fname, mname, lname)
+
+name("Peter", "Ego", "Quill")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, Peter Ego Quill</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            <h2>Variable-length arguments:</h2>
+            <p>Sometimes we may need to pass more arguments than those defined in the actual function. This can be done using variable-length arguments.
+
+                There are two ways to achieve this:
+                
+                </p>    
+                <h3><strong>Arbitrary Arguments:</strong></h3> 
+                <p>While creating a function, pass a * before the parameter name while defining the function. The function accesses the arguments by processing them in the form of tuple.</p>       
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(*name):
+    print("Hello,", name[0], name[1], name[2])
+
+name("James", "Buchanan", "Barnes")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2">Hello, James Buchanan Barnes</pre>
+        </div>
+         <div class="topicdiscription" id="topic6">
+            <h3>Keyword Arbitrary Arguments:</h3>
+            <p>While creating a function, pass a * before the parameter name while defining the function. The function accesses the arguments by processing them in the form of dictionary.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(**name):
+    print("Hello,", name["fname"], name["mname"], name["lname"])
+
+name(mname = "Buchanan", lname = "Barnes", fname = "James")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, James Buchanan Barnes</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic3">
+            <h2>return Statement</h2>
+            <p>The return statement is used to return the value of the expression back to the main function.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def name(fname, mname, lname):
+    return "Hello, " + fname + " " + mname + " " + lname
+
+print(name("James", "Buchanan", "Barnes"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, James Buchanan Barnes
+</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic4">
+            <h2>Python Recursion</h2>
+            <p>We can let the function call itself, such a process is known as calling a function recursively in python.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>def factorial(num): 
+    if (num == 1 or num == 0):
+        return 1
+    else:
+        return (num * factorial(num - 1)) 
+  
+# Driver Code 
+num = 7; 
+print("number: ",num)
+print("Factorial: ",factorial(num))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><br><code>number:  7
+Factorial:  5040</code></pre>
+        </div> 
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

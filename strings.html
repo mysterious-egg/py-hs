@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="dt.css">
+</head>
+<body>
+    <div class="header">
+        <p><a href="#">Cheatsheets</a>/Strings</p>
+        <h1>String</h1>
+    </div>
+    <div class="sidenav">
+        <input type="submit" class="Scrollbutton" value="Strings" onClick="document.getElementById('topic1').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Operation on strings" onClick="document.getElementById('topic2').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="String Method" onClick="document.getElementById('topic3').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Format Strings" onClick="document.getElementById('topic4').scrollIntoView()"/>
+        \
+      </div>
+      <div class="main">
+        <div class="topicdiscription" id="topic1">
+            <h1>Strings</h1>
+            <h3>What are strings</h3>
+            <p>In python, anything that you enclose between single or double quotation marks is considered a string. A string is essentially a sequence or array of textual data.
+
+                Strings are used when working with Unicode characters. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>name = "Samuel"
+print("Hello, " + name)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello, Samuel</code></pre>
+            <p>Note: It does not matter whether you enclose your strings in single or double quotes, the output remains the same. 
+
+ 
+
+                Sometimes, the user might need to put quotation marks in between the strings. Example, consider the sentence: He said, “I want to eat an apple”.
+                
+                How will you print this statement in python?</p>
+        </div>
+        <div class="topicdiscription" id="topic1">
+            <h2 style="color: tomato;">Wrong way</h2>
+                  
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>print("He said, "I want to eat an apple".")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>print("He said, "I want to eat an apple".")
+                ^
+SyntaxError: invalid syntax</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic1">
+            <h2 style="color: green;">Right Way</h2>
+                  
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>print('He said, "I want to eat an apple".')
+#OR
+print("He said, \"I want to eat an apple\".")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>He said, "I want to eat an apple".
+He said, "I want to eat an apple".</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic1">
+            <h2>Writing multiline string</h2>
+            <p>Sometimes the programmer might want to include a note, or a set of instructions, or just might want to explain a piece of code. Although this might be done using multiline comments, the programmer may want to display this in the execution of programmer. This is done using multiline strings.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>receipe = """
+1. Heat the pan and add oil
+2. Crack the egg
+3. Add salt in egg and mix well
+4. Pour the mixture in pan
+5. Fry on medium heat
+"""
+print(receipe)
+
+note = '''
+This is a multiline string
+It is used to display multiline message in the program
+'''
+print(note)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>1. Heat the pan and add oil
+2. Crack the egg
+3. Add salt in egg and mix well
+4. Pour the mixture in pan
+5. Fry on medium heat
+
+
+This is a multiline string
+It is used to display multiline message in the program</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h1>Operation on Strings</h1>
+            <div class="topicdiscription" id="topic2">
+                <h2>Length of a String:</h2>
+                <p>We can find the length of a string using len() function.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>fruit = "Mango"
+len1 = len(fruit)
+print("Mango is a", len1, "letter word.")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Mango is a 5 letter word.</code></pre>
+        </div>
+
+         <div class="topicdiscription" id="topic2">
+            <h2>String as an Array:</h2>
+            <p>A string is essentially a sequence of characters also called an array. Thus we can access the elements of this array. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>pie = "ApplePie"
+print(pie[:5])
+print(pie[6])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Apple
+i</code></pre>
+<div class="codeblock">
+    <pre id="myPreTag"><code>pie = "ApplePie"
+print(pie[:5])      #Slicing from Start
+print(pie[5:])      #Slicing till End
+print(pie[2:6])     #Slicing in between
+print(pie[-8:])     #Slicing using negative index
+</code>
+</pre>
+</div>
+<div class="outputBlock">
+    <pre id="myPreTag2"><code>Apple
+Pie
+pleP
+ApplePie
+</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic2">
+            <h2>Loop through a String</h2>
+            <p>Strings are arrays and arrays are iterable. Thus we can loop through strings.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>alphabets = "ABCDE"
+for i in alphabets:
+    print(i)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>A
+B
+C
+D
+E</code></pre>
+         <div class="topicdiscription" id="topic3">
+            <h1>String Method</h1>
+            <p>Python provides a set of built-in methods that we can use to alter and modify the strings.</p>            
+        </div>
+        <div class="topicdiscription" id="topic3">
+            <p><strong>upper()</strong> : The upper() method converts a string to upper case.</p>
+
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "AbcDEfghIJ"
+print(str1.upper())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>ABCDEFGHIJ</code></pre>
+         <div class="topicdiscription" id="topic3">
+         
+            <p><strong>lower()</strong> : The lower() method converts a string to upper case.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "AbcDEfghIJ"
+print(str1.lower())</code>.</pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>abcdefghij</code></pre>
+         <div class="topicdiscription" id="topic3">
+            
+            <p><strong>strip()</strong> : The strip() method removes any white spaces before and after the string.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str2 = " Silver Spoon "
+print(str2.strip)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Silver Spoon</code></pre>
+         
+         <div class="topicdiscription" id="topic3">
+            <p><strong>rstrip()</strong> : the rstrip() removes any trailing characters.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag">str3 =<code> "Hello !!!"
+print(str3.rstrip("!"))</code></pre>
+
+<div class="outputBlock">
+    <pre id="myPreTag2"><code>Hello</code></pre>
+        </div>
+         <div class="topicdiscription" id="topic3">
+            <p><strong>replace() </strong>: the replace() method replaces a string with another string.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str2 = "Silver Spoon"
+print(str2.replace("Sp", "M"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Silver Moon</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            
+            <p><strong>split()</strong> : The split() method splits the give string at the specified instance and returns the separated strings as list items.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str2 = "Silver Spoon"
+print(str2.split(" "))      #Splits the string at the whitespace " ".</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>['Silver', 'Spoon']</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            <p><strong>capitalize() </strong>: The capitalize() method turns only the first character of the string to uppercase and the rest other characters of the string are turned to lowercase. The string has no effect if the first character is already uppercase.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag">str1 =<code> "hello"
+capStr1 = str1.capitalize()
+print(capStr1)
+str2 = "hello WorlD"
+capStr2 = str2.capitalize()
+print(capStr2)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Hello
+Hello world</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            <p><strong>center() </strong>: The center() method aligns the string to the center as per the parameters given by the user.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 ="Welcome to the Console!!!"
+                print(str1.center(50))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>            Welcome to the Console!!!</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            
+            <p>We can also provide padding character. It will fill the rest of the fill characters provided by the user.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "Welcome to the Console!!!"
+print(str1.center(50, "."))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>............Welcome to the Console!!!.............</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic6">
+            <p><strong>count()</strong> : The count() method returns the number of times the given value has occurred within the given string.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str2 = "Abracadabra"
+countStr = str2.count("a")
+print(countStr)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>4</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic6">
+            <p><strong>endswith() </strong>: The endswith() method checks if the string ends with a given value. If yes then return True, else return False. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "Welcome to the Console !!!"
+print(str1.endswith("!!!"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic6">
+           
+            <p><strong> find()</strong> : The find() method searches for the first occurrence of the given value and returns the index where it is present. If given value is absent from the string then return -1.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "He's name is Dan. He is an honest man."
+print(str1.find("is"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>10</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic6">
+            <p><strong>index() </strong>: The index() method searches for the first occurrence of the given value and returns the index where it is present. If given value is absent from the string then raise an exception.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "He's name is Dan. Dan is an honest man."
+                print(str1.index("Dan"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>13</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            <p>As we can see, this method is somewhat similar to the find() method. The major difference being that index() raises an exception if value is absent whereas find() does not.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "He's name is Dan. Dan is an honest man."
+print(str1.index("Daniel"))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>ValueError: substring not found</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+
+            <p><strong>isalnum()</strong> : The isalnum() method returns True only if the entire string only consists of A-Z, a-z, 0-9. If any other characters or punctuations are present, then it returns False.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code> = "WelcomeToTheConsole"
+print(str1.isalnum())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "Welcome To The Console"
+print(str1.isalnum())
+str2 = "Hurray!!!"
+print(str2.isalnum())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>False
+False</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+           
+            <p><strong>isalpha() </strong>: The isalnum() method returns True only if the entire string only consists of A-Z, a-z. If any other characters or punctuations or numbers(0-9) are present, then it returns False.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "Welcome"
+print(str1.isalpha())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>True </code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+            <p><strong>islower()</strong> : The islower() method returns True if all the characters in the string are lower case, else it returns False. </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "hello world"
+print(str1.islower())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+         <div class="topicdiscription" id="topic3">
+          
+            <p><strong>isprintable()</strong> : The isprintable() method returns True if all the values within the given string are printable, if not, then return False.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = "We wish you a Merry Christmas"
+print(str1.isprintable())</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p><strong>isspace()</strong> : The isspace() method returns True only and only if the string contains white spaces, else returns False.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "        "       #using Spacebar
+print(str1.isspace())
+str2 = "        "       #using Tab
+print(str2.isspace())</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>True
+True</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">         
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "Hello World" 
+print(str1.isspace())</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>False</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p><strong>istitle()</strong> : The istitile() returns True only if the first letter of each word of the string is capitalized, else it returns False.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "World Health Organization" 
+print(str1.istitle())</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><br>True</pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                              
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str2 = "To kill a Mocking bird"
+print(str2.istitle())</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>False</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p><strong>isupper()</strong> : The isupper() method returns True if all the characters in the string are upper case, else it returns False.   </p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "WORLD HEALTH ORGANIZATION" 
+print(str1.isupper())</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p><strong>replace() </strong>: The replace() method can be used to replace a part of the original string with another string. </p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "Python is a Compiled Language." 
+print(str1.replace("Compiled", "Interpreted"))</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>Python is a Interpreted Language.</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p><strong>startswith()</strong> : The endswith() method checks if the string starts with a given value. If yes then return True, else return False. </p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "Python is a Interpreted Language" 
+print(str1.startswith("Python"))</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+                       
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "Python is a Interpreted Language" 
+print(str1.startswith("Inter", 12, 20))</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>True</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic3">
+                    <p>
+                       <strong> title() </strong>: The title() method capitalizes each letter of the word within the string.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "He's name is Dan. Dan is an honest man."
+print(str1.title())</code>  </pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>He'S Name Is Dan. Dan Is An Honest Man.</code></pre>
+                </div>
+                </div>
+                <div class="topicdiscription" id="topic4">
+                    <h1>Format Strings</h1>
+                    <p>What if we want to join two separated strings?
+                        We can perform concatenation to join two or more separate strings.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str4 = "Captain"
+str5 = "America"
+str6 = str4 + " " + str5
+print(str6)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>Captain America</code></pre>
+                </div>
+
+                <div class="topicdiscription" id="topic4">
+                    <p>In the above example, we saw how one can concatenate two strings. But how can we concatenate a string and an integer?</p>           
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>name = "Guzman"
+age = 18
+print("My name is" + name + "and my age is" + age)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>TypeError: can only concatenate str (not "int") to str </code></pre>
+                </div>
+                <div class="topicdiscription" id="topic4">
+                    <p>As we can see, we cannot concatenate a string to another data type.
+
+ 
+
+                        So what’s the solution?
+                        We make the use of format() method. The format() methods places the arguments within the string wherever the placeholders are specified.
+                        
+                        Example:</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>name = "Guzman"
+age = 18
+statement = "My name is {} and my age is {}."
+print(statement.format(name, age)) </code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>My name is Guzman and my age is 18.</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic4">
+                    <h1>Escape Characters</h1>
+                    <p>Escape Characters are very important in python. It allows us to insert illegal characters into a string like a back slash, new line or a tab.
+
+                        Single/Double Quote: used to insert single/double quotes in the string.
+                        
+                        </p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "He was \"Flabergasted\"."
+str2 = 'He was \'Flabergasted\'.'
+print(str1)
+print(str2)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>He was "Flabergasted".
+He was 'Flabergasted'.</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic4">
+                    <p><strong> New Line</strong>: inserts a new line wherever specified.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str1 = "I love doing Yoga. \nIt cleanses my mind and my body."
+print(str1)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>I love doing Yoga.
+It cleanses my mind and my body.</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic4">
+                         
+                    <p><strong>Tab</strong>: inserts a tab wherever specified.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str2 = "Hello \t\tWorld \t!!!"
+print(str2)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>Hello           World   !!!</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic1">
+                    <p><strong>Backspace:</strong> erases the character before it wherever it is specified.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str2 = "Hello  \bWorld !!!"
+print(str2)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>Hello World !!!</code></pre>
+                </div>
+                <div class="topicdiscription" id="topic1">
+                    <p><strong>Backslash:</strong> used to insert a backslash into a string.</p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>str3 = "What will you eat? Apple\\Banana"
+print(str3)</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <pre id="myPreTag2"><code>What will you eat? Apple\Banana</code></pre>
+                </div>
+                
+        
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

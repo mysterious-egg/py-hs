@@ -1,0 +1,135 @@
+body{
+    border: none;
+    margin: 0;
+    background-color: #f4fcff;
+}
+.sidenav {
+    width: 130px;
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: white;
+    overflow-x: hidden;
+    padding: 8px 0;
+    top: -50px;
+    left: 100px;
+    border: 1px solid #10162F;
+    width: 200px;
+    position: fixed;
+    margin-top:200px ;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #10162F;
+    display: block;
+    z-index: 2;
+  }
+  
+  .sidenav a:hover {
+    color: #0362b0;
+  }
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30%;
+    height: 200px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}  
+.header a{
+    text-decoration: none;
+    color: white;
+}
+  
+  pre {
+    position: relative;
+    background: black;
+    padding: 10px;
+    font-size: 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid #e6e7e9;
+    max-width: 700px;
+  }
+  .myPreTag2 {
+    position: relative;
+    background: #d3d6db;
+    padding: 10px;
+    font-size: 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid #e6e7e9;
+    max-width: 500px;
+    max-height: auto;
+    
+  }
+  
+  .copy-button {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: gray;
+    border-radius: 0.5em;
+    padding: 2px 7px;
+  }
+  
+  .copy-button:hover {
+    color: #000;
+  }
+  .main{
+    margin-left: 450px;
+    position: absolute;
+    margin-top: 200px;
+    z-index: 0;
+  }
+  .cont .code-toolbar {
+    font-size: 1rem;
+    overflow-y: auto;
+    max-height: 48vh;
+    z-index: 0;
+    margin: 0 22px;
+}
+div.code-toolbar {
+    position: relative;
+}
+.Scrollbutton{
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.Scrollbutton:hover{
+    background-color: #000;
+    color: white;
+}
+p{
+  font-size: 20px;
+}
+code{
+  color: #e6e7e9;
+}
+.topicdiscription{
+  max-width: 700px;
+}
+.outputblock{
+  color: white;
+}
+.ba{
+  margin-top: -70px;
+}

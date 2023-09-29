@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuples</title>
+    <link rel="stylesheet" href="dt.css">
+</head>
+<body>
+    <div class="header">
+        <p><a href="#">Cheatsheets</a>/Tuples</p>
+        <h1>Python Tuples</h1>
+    </div>
+    <div class="sidenav">
+        <input type="submit" class="Scrollbutton" value="Python Tuples" onClick="document.getElementById('topic1').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Tuple Index" onClick="document.getElementById('topic2').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Manipulating Tuples" onClick="document.getElementById('topic3').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Unpacking Tuple" onClick="document.getElementById('topic4').scrollIntoView()"/>
+        
+      </div>
+      <div class="main">
+        <div class="topicdiscription" id="topic1">
+            <h1>Python Tuples</h1>
+            <p>Tuples are ordered collection of data items. They store multiple items in a single variable. Tuple items are separated by commas and enclosed within round brackets (). Tuples are unchangeable meaning we can not alter them after creation.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>tuple1 = (1,2,2,3,5,4,6)
+tuple2 = ("Red", "Green", "Blue")
+print(tuple1)
+print(tuple2)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>(1, 2, 2, 3, 5, 4, 6)
+('Red', 'Green', 'Blue')</code></pre>
+        </div>
+                    
+        
+        <div class="codeblock">
+            <pre id="myPreTag"><code>details = ("Abhijeet", 18, "FYBScIT", 9.8)
+print(details)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>('Abhijeet', 18, 'FYBScIT', 9.8)</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+            <h2>Tuple index</h2>
+            <p>Each item/element in a tuple has its own unique index. This index can be used to access any particular item from the tuple. The first item has index [0], second item has index [1], third item has index [2] and so on.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>country = ("Spain", "Italy", "India", "England", "Germany")
+#            [0]      [1]      [2]       [3]        [4]</code></pre>
+       
+        <div class="topicdiscription" id="topic2">
+            <h2>Accessing tuple items:</h2>
+            <p><strong> Positive Indexing:</strong>
+                As we have seen that tuple items have index, as such we can access items using these indexes.</p>   
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>country = ("Spain", "Italy", "India", "England", "Germany")
+#            [0]      [1]      [2]       [3]        [4]
+print(country[1])
+print(country[3])
+print(country[0])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Italy
+England
+Spain</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic2">
+          
+            <p>Similar to positive indexing, negative indexing is also used to access items, but from the end of the tuple. The last item has index [-1], second last item has index [-2], third last item has index [-3] and so on.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>country = ("Spain", "Italy", "India", "England", "Germany")
+#            [0]      [1]      [2]       [3]        [4]
+print(country[-1])
+print(country[-3])
+print(country[-4])</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Germany
+India
+Italy</code></pre>
+        </div>
+
+         <div class="topicdiscription" id="topic2">
+            <p><strong> III. Check for item:</strong>
+                We can check if a given item is present in the tuple. This is done using the in keyword.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>country = ("Spain", "Italy", "India", "England", "Germany")
+if "Germany" in country:
+    print("Germany is present.")
+else:
+    print("Germany is absent.")</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Germany is present.</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic3">
+            <h1>Manipulating Tuples</h1>
+            <p>Tuples are immutable, hence if you want to add, remove or change tuple items, then first you must convert the tuple to a list. Then perform operation on that list and convert it back to tuple.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>countries = ("Spain", "Italy", "India", "England", "Germany")
+temp = list(countries)
+temp.append("Russia")       #add item 
+temp.pop(3)                 #remove item
+temp[2] = "Finland"         #change item
+countries = tuple(temp)
+print(countries)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>('Spain', 'Italy', 'Finland', 'Germany', 'Russia')</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic3">
+            
+            <p>Thus, we convert the tuple to a list, manipulate items of the list using list methods, then convert list back to a tuple.
+
+ 
+
+                However, we can directly concatenate two tuples instead of converting them to list and back.
+                
+                Example:</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>countries = ("Pakistan", "Afghanistan", "Bangladesh", "ShriLanka")
+countries2 = ("Vietnam", "India", "China")
+southEastAsia = countries + countries2
+print(southEastAsia)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>('Pakistan', 'Afghanistan', 'Bangladesh', 'ShriLanka', 'Vietnam', 'India', 'China')</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic4">
+            <h1>Unpack Tuples</h1>
+            <p>Unpacking is the process of assigning the tuple items as values to variables.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>info = ("Marcus", 20, "MIT")
+(name, age, university) = info
+print("Name:", name)
+print("Age:",age)
+print("Studies at:",university)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Name: Marcus
+Age: 20
+Studies at: MIT</code>/pre>
+        </div>
+        <div class="topicdiscription" id="topic4">
+          
+            <p>Here, the number of list items is equal to the number of variables.
+
+ 
+
+                But what if we have more number of items then the variables?
+                
+                You can add an * to one of the variables and depending upon the position of variable and number of items, python matches variables to values and assigns it to the variables.
+                
+                </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>fauna = ("cat", "dog", "horse", "pig", "parrot", "salmon")
+(*animals, bird, fish) = fauna
+print("Animals:", animals)
+print("Bird:", bird)
+print("Fish:", fish)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>Animals: ['cat', 'dog', 'horse', 'pig']
+Bird: parrot
+Fish: salmon</code></pre>
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>fauna = ("parrot", "salmon", "cat", "dog", "horse", "pig")
+(bird, fish, *animals) = fauna
+print("Animals:", animals)
+print("Bird:", bird)
+print("Fish:", fish)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <pre id="myPreTag2"><code>>Animals: ['cat', 'dog', 'horse', 'pig']
+Bird: parrot
+Fish: salmon </code></pre>
+        </div>
+       
+        
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

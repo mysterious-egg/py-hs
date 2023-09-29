@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatype and Operators</title>
+    <link rel="stylesheet" href="dt.css">
+</head>
+<body>
+    <div class="header">
+        <p><a href="#">Cheoatsheets</a>/DataTypes and Operators</p>
+        <h1>DataTypes and Operators</h1>
+    </div>
+    <div class="sidenav">
+        <input type="submit" class="Scrollbutton" value="Numeric data" onClick="document.getElementById('topic1').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Text data" onClick="document.getElementById('topic2').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Boolean Data" onClick="document.getElementById('topic3').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Sequenced data" onClick="document.getElementById('topic4').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Mapped data" onClick="document.getElementById('topic5').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Binary data" onClick="document.getElementById('topic6').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Set data" onClick="document.getElementById('topic7').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Python Numbers" onClick="document.getElementById('topic8').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="TypeCasting" onClick="document.getElementById('topic9').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Operators" onClick="document.getElementById('topic10').scrollIntoView()"/>
+        <input type="submit" class="Scrollbutton" value="Boolean’s" onClick="document.getElementById('topic11').scrollIntoView()"/>
+
+      
+    
+    </div>
+      <div class="main">
+        <h1 class="ba">DataTypes </h1>
+        <p>Data type specifies the type of value a variable requires to do various operations without causing an error. By default, python provides the following built-in data types:</p>
+        <div class="topicdiscription" id="topic1">
+            <h2>Numeric data: int, float, complex</h2>
+            <p>int: 3, -8, 0 <br>
+
+                float: 7.349, -9.0, 0.0000001 <br>
+                
+                complex: 6 + 2i <br>
+                
+                more on numeric data types in the number chapter.</p>            
+        </div>
+      
+        <div class="topicdiscription" id="topic2">
+            <h2>Text data: str
+            </h2>
+            <p>str: “Hello World!!!”, “Python Programming”</p>            
+        </div>
+       
+        <div class="topicdiscription" id="topic3">
+            <h2>Boolean Data</h2>
+            <p>Boolean data consists of values True or False.</p>            
+        </div>
+        
+        <div class="topicdiscription" id="topic4">
+            <h2>Sequenced data: list, tuple, range</h2>
+            <p> <strong> list</strong>: A list is an ordered collection of data with elements separated by a comma and enclosed within square brackets. Lists are mutable and can be modified after creation.
+
+            </p> 
+            <h3>Example:</h3>          
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>list1 = [8, 2.3, [-4, 5], ["apple", "banana"]]
+print(list1)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><br><code>[8, 2.3, [-4, 5], ['apple', 'banana']]</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic4">
+            
+            <p> 
+
+                <strong> tuple</strong>: A tuple is an ordered collection of data with elements separated by a comma and enclosed within parentheses. Tuples are immutable and can not be modified after creation. </p>            
+        </div>
+        <div class="codeblock">
+            <h3>Example</h3>
+            <pre id="myPreTag"><code>tuple1 = (("parrot", "sparrow"), ("Lion", "Tiger"))
+print(tuple1)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><br><code>(('parrot', 'sparrow'), ('Lion', 'Tiger'))</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic4">
+            
+            <p><strong> range</strong>: returns a sequence of numbers as specified by the user. If not specified by the user then it starts from 0 by default and increments by 1.</p>
+
+        </div>
+        <div class="codeblock">
+            <h3>Example</h3>
+            <pre id="myPreTag"><code>sequence1 = range(4,14,2)
+for i in sequence1:
+  print(i)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><br><code>4
+6
+8
+10
+12  </code></pre>
+        </div>
+        
+        <div class="topicdiscription" id="topic5">
+            <h2>Mapped data: dict</h2>
+            <p><strong>dict</strong>: a dictionary is an unordered collection of data containing a key:value pair. The key:value pairs are enclosed within curly brackets.</p>            
+        </div>
+        <div class="codeblock">
+            <h3>Example</h3>
+            <pre id="myPreTag"><code>dict1 = {"name":"Sakshi", "age":20, "canVote":True}
+print(dict1)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>{'name': 'Sakshi', 'age': 20, 'canVote': True} </code></pre>
+        </div>
+
+         <div class="topicdiscription" id="topic6">
+            <h2>Binary data: bytes, bytearray, memoryview</h2>
+            <p><strong>bytes</strong>: bytes() function is used to convert objects into byte objects, or create empty bytes object of the specified size.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>#Converting string to bytes
+str1 = "This is a string"
+arr1 = bytes(str1, 'utf-8')
+print(arr1)
+arr2 = bytes(str1, 'utf-16')
+print(arr2)
+
+#Creating bytes of given size
+bytestr = bytes(4)
+print(bytestr)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>b'This is a string'
+b'\xff\xfeT\x00h\x00i\x00s\x00 \x00i\x00s\x00 \x00a\x00 \x00s\x00t\x00r\x00i\x00n\x00g\x00'
+b'\x00\x00\x00\x00'</code></pre>
+        </div>
+        <div class="topicdiscription" id="topic6">
+            
+            <p><strong>bytearray</strong>: bytearray() function is used to convert objects into bytearray objects, or create empty bytearray object of the specified size.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>#Converting string to bytes
+str1 = "This is a string"
+arr1 = bytearray(str1, 'utf-8')
+print(arr1)
+arr2 = bytearray(str1, 'utf-16')
+print(arr2)
+
+#Creating bytes of given size
+bytestr = bytearray(4)
+print(bytestr)</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>bytearray(b'This is a string')
+bytearray(b'\xff\xfeT\x00h\x00i\x00s\x00 \x00i\x00s\x00 \x00a\x00 \x00s\x00t\x00r\x00i\x00n\x00g\x00')
+bytearray(b'\x00\x00\x00\x00')</code></pre>
+        <div class="topicdiscription" id="topic6">
+            
+            <p> 
+
+                <strong>memoryview</strong>: memoryview() function returns a memory view object from a specified object.</p></div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>str1 = bytes("home", "utf-8")
+memoryviewstr = memoryview(str1)
+print(list(memoryviewstr[0:]))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>[104, 111, 109, 101]</code></pre>
+
+
+
+        <div class="topicdiscription" id="topic7">
+            <h2>Set data:</h2>
+            <p>Set is an unordered collection of elements in which no element is repeated. The elements of sets are separated by a comma and contained within curly braces.</p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>set1 = {4, -5, 8, 3, 2.9}
+print(set1)</code></pre>
+
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>{2.9, 3, 4, 8, -5}</code></pre>
+
+      
+
+
+        <div class="topicdiscription" id="topic8">
+            <h2>Python numbers</h2>
+            <p>In Python, numbers are of the following data types:
+                <ul>
+                    <li>Int</li><li>Float</li><li>complex</li>
+                </ul>
+
+            </p>            
+        </div>
+        
+        <div class="topicdiscription" id="topic8">
+      
+            <p><strong> int: </strong>is a positive or a negative integer of any length. int should not be a decimal or a fraction.
+
+            </p>            
+        </div>
+        <div class="codeblock">
+            <pre id="myPreTag"><code>int1 = -2345698
+int2 = 0
+int3 = 100548
+
+print(type(int1))
+print(type(int2))
+print(type(int3))</code></pre>
+        </div>
+        <div class="outputBlock">
+            <h3>Output</h3>
+            <pre id="myPreTag2"><code>class 'int'
+class 'int'
+class 'int'</code></pre>
+</div>
+            <div class="topicdiscription" id="topic8">
+            
+                <p><strong>Float :</strong>A float is a positive or a negative decimal number. It can be an exponential number or a fraction.
+    
+                </p>            
+            </div>
+            <div class="codeblock">
+                <pre id="myPreTag"><code>flt1 = -8.35245     #decimal number
+flt2 = 0.000001     #decimal number
+flt3 = 2.6E44       #exponential number
+flt4 = -6.022e23    #exponential number
+
+print(type(flt1))
+print(type(flt2))
+print(type(flt3))
+print(type(flt4))</code></pre>
+            </div>
+            <div class="outputBlock">
+                <h3>Output</h3>
+                <pre id="myPreTag2"><code>class 'float'
+class 'float'
+class 'float'
+class 'float'</code></pre></div>
+                <div class="topicdiscription" id="topic8">
+               
+                    <p><strong>Complex</strong>Complex numbers are a combination of real and imaginary number. They are of the form a + bj, where a is the real part and bj is the imaginary part.
+        
+                    </p>            
+                </div>
+                <div class="codeblock">
+                    <pre id="myPreTag"><code>cmplx1 = 2 + 4j
+cmplx2 = -(3 + 7j)
+cmplx3 = -4.1j
+cmplx4 = 6j
+
+print(type(cmplx1))
+print(type(cmplx2))
+print(type(cmplx3))
+print(type(cmplx4))</code></pre>
+                </div>
+                <div class="outputBlock">
+                    <h3>Output</h3>
+                    <pre id="myPreTag2"><code>class 'complex'
+class 'complex'
+class 'complex'
+class 'complex'</code></pre>
+</div>
+
+    <div class="topicdiscription" id="topic9">
+        <h2>TypeCasting</h2>
+        <p> type casting is done when we want to specify a type on a variable. 
+
+            </p>            
+    </div>
+    <div class="codeblock">
+        <pre id="myPreTag"><br><code>str1 = "7"          
+str2 = "3.142"
+str3 = "13"
+num1 = 29
+num2 = 6.67
+
+print(int(str1))
+print(float(str2))
+print(float(str3))
+print(str(num1))
+print(str(num2))</code></pre>
+    </div>
+    <div class="outputBlock">
+        <h3>Output</h3>
+        <pre id="myPreTag2"><code>7
+3.142
+13.0
+29
+6.67</code></pre>
+</div>
+
+
+
+    <div class="topicdiscription" id="topic10">
+        <h2>Operators</h2>
+        <p>Python has different types of operators for different operations. They are as follows:</p>            
+    </div>
+    
+
+
+
+
+    <div class="topicdiscription" id="topic10">
+        <h3>Arithmetic operators:</h3>
+        <p>Arithmetic operators are used to perform arithmetic/mathematical operations.</p>            
+        <table class="MsoTable15Grid4Accent1" style="border-collapse: collapse; border: none; height: 272px; width: 90%;" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes;">
+            <td style="width: 0%; border-top: 1pt solid rgb(68, 114, 196); border-bottom: 1pt solid rgb(68, 114, 196); border-left: 1pt solid rgb(68, 114, 196); border-image: initial; border-right: none; background: rgb(68, 114, 196); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: 1pt solid rgb(68, 114, 196); border-left: none; border-bottom: 1pt solid rgb(68, 114, 196); border-right: none; background: rgb(68, 114, 196); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Operator</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: 1pt solid rgb(68, 114, 196); border-right: 1pt solid rgb(68, 114, 196); border-bottom: 1pt solid rgb(68, 114, 196); border-image: initial; border-left: none; background: rgb(68, 114, 196); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Example</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Addition</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">+</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a+b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Subtraction</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">-</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a-b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Multiplication</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">*</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a*b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 3;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Division</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">/</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a/b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 4;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Exponential</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">**</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a**b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 5;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Modulus</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">%</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="text-indent: -108.0pt; line-height: normal; margin: 0cm 0cm .0001pt 108.0pt;"><span style="font-size: 16.0pt;">a%b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 6; mso-yfti-lastrow: yes;">
+            <td style="width: 0%; border-right: 1pt solid rgb(142, 170, 219); border-bottom: 1pt solid rgb(142, 170, 219); border-left: 1pt solid rgb(142, 170, 219); border-image: initial; border-top: none; background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Floor Division</span></strong></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">//</span></p>
+            </td>
+            <td style="width: 0%; border-top: none; border-left: none; border-bottom: 1pt solid rgb(142, 170, 219); border-right: 1pt solid rgb(142, 170, 219); background: rgb(217, 226, 243); padding: 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a//b</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+    <div class="topicdiscription" id="topic10">
+        <h3>Assignment operators:</h3>
+        <p>These operators are used to assign values to variables.  </p>
+        <table class="MsoTable15Grid4Accent1" style="width: 90%; border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" width="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes;">
+            <td style="width: 174.25pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Evaluated As</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a=b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">+=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a+=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a+b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">-=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a-=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a-b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 3;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">*=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a*=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a*b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 4;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">**=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a**=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a**b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 5;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">/*</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a/=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a/b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 6;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">//=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a//=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a//b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 7;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">%=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a%=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a%b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 8;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">&amp;=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a&amp;=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a&amp;b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 9;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">|=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a|=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a|b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 10;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">^=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a^=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a^b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 11;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">&gt;&gt;=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a&gt;&gt;=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a&gt;&gt;b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 12; mso-yfti-lastrow: yes;">
+            <td style="width: 174.25pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">&lt;&lt;=</span></strong></p>
+            </td>
+            <td style="width: 350.0pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="467">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a&lt;&lt;=b<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>or<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>a=a&lt;&lt;b</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+                  
+ 
+</div>
+    <div class="topicdiscription" id="topic10">
+        <h2>Bitwise operators:</h2>
+        <p>Bitwise operators are used to deal with binary operations.</p>            
+        <table class="MsoTable15Grid4Accent1" style="width: 90%; border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" width="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes; height: 24.15pt;">
+            <td style="border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Name</span></strong></p>
+            </td>
+            <td style="border-top: solid #4472C4 1.0pt; mso-border-top-themecolor: accent1; border-left: none; border-bottom: solid #4472C4 1.0pt; mso-border-bottom-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-bottom-alt: solid #4472C4 .5pt; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Operator</span></strong></p>
+            </td>
+            <td style="border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Example</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0; height: 20.55pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise AND</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise AND</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a &amp; b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise OR</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise OR</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a | b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise NOT</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise NOT</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">~a</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 3; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise XOR</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise XOR</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a ^ b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 4; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise right shift</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise right shift</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a&gt;&gt;</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; height: 20.55pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise left shift</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Bitwise left shift</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">b&lt;&lt;</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+</div>
+    <div class="topicdiscription" id="topic10">
+        <h2>Comparison operators:</h2>
+        <p>These operators are used to compare values.</p> 
+        <table class="MsoTable15Grid4Accent1" style="border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes;">
+            <td style="width: 191.15pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: solid #4472C4 1.0pt; mso-border-top-themecolor: accent1; border-left: none; border-bottom: solid #4472C4 1.0pt; mso-border-bottom-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-bottom-alt: solid #4472C4 .5pt; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Operator</span></strong></p>
+            </td>
+            <td style="width: 174.3pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Example</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Equal</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">==</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a==b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Not Equal</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">!=</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a!=b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Less Than</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">&lt;&nbsp;</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a&gt;b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 3;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Greater Than</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">&gt;&nbsp;</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a&lt;b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 4;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Less Than or Equal to</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">&lt;=</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a&gt;=b</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes;">
+            <td style="width: 191.15pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="255">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Greater Than or Equal to</span></strong></p>
+            </td>
+            <td style="width: 157.35pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="210">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">&gt;=</span></p>
+            </td>
+            <td style="width: 174.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="232">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a&lt;=b</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>           
+    </div>
+    <div class="topicdiscription" id="topic10">
+        <h3>Identity operators:</h3>
+        <table class="MsoTable15Grid4Accent1" style="border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes;">
+            <td style="width: 106.1pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: solid #4472C4 1.0pt; mso-border-top-themecolor: accent1; border-left: none; border-bottom: solid #4472C4 1.0pt; mso-border-bottom-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-bottom-alt: solid #4472C4 .5pt; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Example</span></strong></p>
+            </td>
+            <td style="width: 303.3pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Evaluated As</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0;">
+            <td style="width: 106.1pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">is</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a is b</span></p>
+            </td>
+            <td style="width: 303.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">Returns True if a and b are same</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1; mso-yfti-lastrow: yes;">
+            <td style="width: 106.1pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">is not</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a is not b</span></p>
+            </td>
+            <td style="width: 303.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">Returns True if a and b are not same</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>           
+    </div>
+    <div class="topicdiscription" id="topic10">
+        <h2>Logical operators:</h2>
+        <p>These operators are used to deal with logical operations.</p>  
+        <table class="MsoTable15Grid4Accent1" style="width: 90%; border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" width="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes; height: 24.15pt;">
+            <td style="border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Name</span></strong></p>
+            </td>
+            <td style="border-top: solid #4472C4 1.0pt; mso-border-top-themecolor: accent1; border-left: none; border-bottom: solid #4472C4 1.0pt; mso-border-bottom-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-bottom-alt: solid #4472C4 .5pt; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Operator</span></strong></p>
+            </td>
+            <td style="border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 24.15pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 14.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: white; mso-themecolor: background1; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Example</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0; height: 20.55pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">AND</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">and</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 20.55pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a=2 and b=3</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">OR</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">or</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">a=2 or b=3</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes; height: 21.45pt;">
+            <td style="border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">NOT</span></strong></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">not</span></p>
+            </td>
+            <td style="border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 21.45pt;" valign="top">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #273239; letter-spacing: .1pt; mso-fareast-language: EN-IN;">Not(a=2 or b=3)</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>          
+    </div>
+    <div class="topicdiscription" id="topic10">
+        <h2>Membership operators:</h2>
+        <table class="MsoTable15Grid4Accent1" style="border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes;">
+            <td style="width: 106.1pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: solid #4472C4 1.0pt; mso-border-top-themecolor: accent1; border-left: none; border-bottom: solid #4472C4 1.0pt; mso-border-bottom-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-bottom-alt: solid #4472C4 .5pt; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Example</span></strong></p>
+            </td>
+            <td style="width: 303.3pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Evaluated As</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0;">
+            <td style="width: 106.1pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">in</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">a in b</span></p>
+            </td>
+            <td style="width: 303.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">Returns True if a is present in given sequence or collection</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1; mso-yfti-lastrow: yes;">
+            <td style="width: 106.1pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="141">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">not in</span></strong></p>
+            </td>
+            <td style="width: 4.0cm; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="151">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">a not in b</span></p>
+            </td>
+            <td style="width: 303.3pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt;" valign="top" width="404">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">Returns True if a is not present in given sequence or collection</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+         
+    <div class="topicdiscription" id="topic10">
+        <h2>Operator Precedence in Python:
+        </h2>
+        <table class="MsoTable15Grid4Accent1" style="width: 90%; border-collapse: collapse; border: none; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" border="1" width="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="mso-yfti-irow: -1; mso-yfti-firstrow: yes; mso-yfti-lastfirstrow: yes; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-right: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-left-alt: solid #4472C4 .5pt; mso-border-left-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 5;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Name</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border: solid #4472C4 1.0pt; mso-border-themecolor: accent1; border-left: none; mso-border-top-alt: solid #4472C4 .5pt; mso-border-top-themecolor: accent1; mso-border-bottom-alt: solid #4472C4 .5pt; mso-border-bottom-themecolor: accent1; mso-border-right-alt: solid #4472C4 .5pt; mso-border-right-themecolor: accent1; background: #4472C4; mso-background-themecolor: accent1; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 1;"><strong><span style="font-size: 16.0pt; color: white; mso-themecolor: background1;">Operator</span></strong></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 0; height: 18.2pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Parenthesis</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">()</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 1; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Exponential</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">**</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 2; height: 18.2pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Complement, unary plus, unary minus</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">~ , +, <span style="mso-spacerun: yes;">&nbsp;</span>-</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 3; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Multiply, divide, modulus, floor division</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">*,<span style="mso-spacerun: yes;">&nbsp; </span>/, <span style="mso-spacerun: yes;">&nbsp;</span>%, <span style="mso-spacerun: yes;">&nbsp;</span>//</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 4; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Addition, subtraction</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">+, -</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 5; height: 18.2pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Left shift and right shift operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 18.2pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">&lt;&lt;, &gt;&gt;</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 6; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Bitwise and</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">&amp;</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 7; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Bitwise or and xor</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">^, |</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 8; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Comparison operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">&lt;, &gt;, &gt;=, &lt;=</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 9; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Equality operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">==, !=</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 10; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Assignment operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">=, %=, /=, //=, -=, +=, *= , **=</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 11; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Identity operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">is, is not</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 12; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 68;"><strong><span style="font-size: 16.0pt;">Membership operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 64;"><span style="font-size: 16.0pt;">in, not in</span></p>
+            </td>
+            </tr>
+            <tr style="mso-yfti-irow: 13; mso-yfti-lastrow: yes; height: 17.65pt;">
+            <td style="width: 375.4pt; border: solid #8EAADB 1.0pt; mso-border-themecolor: accent1; mso-border-themetint: 153; border-top: none; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-alt: solid #8EAADB .5pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="501">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-yfti-cnfc: 4;"><strong><span style="font-size: 16.0pt;">Logical operators</span></strong></p>
+            </td>
+            <td style="width: 148.8pt; border-top: none; border-left: none; border-bottom: solid #8EAADB 1.0pt; mso-border-bottom-themecolor: accent1; mso-border-bottom-themetint: 153; border-right: solid #8EAADB 1.0pt; mso-border-right-themecolor: accent1; mso-border-right-themetint: 153; mso-border-top-alt: solid #8EAADB .5pt; mso-border-top-themecolor: accent1; mso-border-top-themetint: 153; mso-border-left-alt: solid #8EAADB .5pt; mso-border-left-themecolor: accent1; mso-border-left-themetint: 153; mso-border-alt: solid #8EAADB .5pt; mso-border-themecolor: accent1; mso-border-themetint: 153; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.65pt;" valign="top" width="198">
+            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 16.0pt;">and, or, not</span></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+
+    <div class="topicdiscription" id="topic10">
+        <h1>Boolean</h1>
+        <p>Boolean consists of only two values; True and False. <br>
+
+ 
+
+            Why are Boolean’s needed? <br>
+            Consider the following if-else statement:
+            
+            </p>            
+    </div>
+   
+    <div class="topicdiscription" id="topic1">
+        <h2>None:</h2>
+               
+    </div>
+    <div class="codeblock">
+        <pre id="myPreTag"><br><code>print("None: ",bool(None))</code></pre>
+    </div>
+    <div class="outputBlock">
+        <pre id="myPreTag2"><code>None:  False</code></pre>
+    </div>
+    
+</div> 
+</div>
+<script src="index.js"></script>
+</body>
+</html>
